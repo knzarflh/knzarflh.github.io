@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hai Mayda</title>
+  <style>
+  
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff7f0, #ffe4c4);
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #d2691e;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+      color: #555;
+    }
+
+    .photo-section {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin: 3rem auto;
+      max-width: 900px;
+      padding: 0 1rem;
+    }
+
+    .photo {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+      flex-wrap: wrap;
+    }
+
+    .photo.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .photo:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .photo-image {
+      flex: 1 1 280px;
+      background-color: #ffcfc7;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      height: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-image:hover {
+      transform: scale(1.05);
+    }
+
+    .photo-image img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .photo-content {
+      flex: 2 1 300px;
+    }
+
+    .photo-content small {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #888;
+    }
+
+    .photo-content h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .photo-content p {
+      margin-top: 0.5rem;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .footer-content {
+      background-color: #fff5e1;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+
+    .btn {
+      background-color: #ff8c42;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e6732f;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .photo {
+        flex-direction: column !important;
+        text-align: center;
+      }
+
+      .photo-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .photo-content {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<script src="script.js"></script>
+<body>
+  <audio autoplay loop hidden>
+    <source src="musikjumbo.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1>Hai Mayda</h1>
+    <p>Hi Brokk, Btw selamat wisuda ya, udah selesai masa sma mu, habis ini lanjut cari ilmu di Aussie + jalan jalan, nii ada sedikit kenangan dariku asekkk, eh sebelumnya mungkin gk tak tulis semua karna ngga tau dan gk nemu fotonya, jadi aku tulis yang aku tau, silahkan dibaca :) </p>
+  </header>
+
+  <section class="photo-section">
+    <div class="photo">
+      <div class="photo-image">
+        <img src="1fotbar1.jpg" alt="Foto 1">
+      </div>
+      <div class="photo-content">
+        <small>16 Juni 2022 – Wisuda MTsN 2 Malang</small>
+        <h3>Fotbar Pertama</h3>
+        <p>Inget ngga foto ini?? Fotbar pertama kita (yang niat) dan pada hari itu jadi tanggal dimana awal kita bakal
+          jarang ketemu lagi karena uda beda sekolah, dan foto itu kita post di InstaStory sampai akhirnya rame banget
+          dm kita wkwkwk. </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="mastrange.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>16 Juni 2022 – Insta Story</small>
+        <h3>Aku Suka Kalimatmu</h3>
+        <p>masih di tanggal yang sama, aku inget kamu kek mau ngepost ato ngga, karena gk enak sama someone, yaa tapi
+          ujung" nya tetep di post si, btw aku suka banget sama kata katanya, bakal tak inget terus si kata katanya</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="3typography.jpg" alt="Foto 3">
+      </div>
+      <div class="photo-content">
+        <small>Desember 2023 – Festival Cahaya</small>
+        <h3>Typography</h3>
+        <p>Masa masa aku suka banget buat typography salah satunya karena banyak stok kata kata darimu (dari bintang
+          yang mbok kasi si) dan dulu sering banget kamu revisi, gini ternyata rasanya ngomongin desain sama orang
+          perfeksionis wkwkwk.</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="4cap3jari.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>21 Oktober 2022 – MTsN 2 Malang</small>
+        <h3>Cap 3 Jari</h3>
+        <p>Setelah beberapa bulan gak meet, baru beberapa bulan juga, ntah siapa yang ngambil foto ini, tapi sayang
+          banget dulu gk bisa berlama lama, soale kamu harus segera pulang tapi aku baru dateng huhuhu</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="bukumantappu.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>3 Januari 2023 – Ultahku</small>
+        <h3>Hadiah Buku</h3>
+        <p>Btw foto ini tak ambil pas buat web ini, foto yang dulu ilang hehe, sebelumnya makasih yaa buat bukunya, masih tak simpen kok sampek sekarang, buku ini bisa buat aku yg gk suka baca jadi suka baca, ya ofc karena buku ini darimu :) </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="kampung inggris.jpg" alt="Foto 2">
+      </div> 
+      <div class="photo-content">
+        <small>7 September 2023 - Kampung Inggris</small>
+        <h3>Car Free Day</h3>
+        <p>meet lagi wehehehe, aku jadi termotivasi pergi ke sini juga gara gara kamu, meskipun kurang lama si cuma 2 minggu, tapi aku ngerasa si kepedeanku buat ngomong dan public speaking meningkat, sayang banget banyak hal yang belum kita coba, dan belum kita kunjungi, salah satunya lapangan, dulu hujan sii :( </p>  
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="menang madfest.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>12 Agustus 2023 - Gading Serpong, Banten</small>
+        <h3>Menang Madfest</h3>
+        <p>Wiii, congrats ya buat prestasi nasionalnya, padahal dulu awal awal masuk man ngambis olim, eh rejekinya ternyata di Madfest, sekali lagi selamat ya</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="ketrima afs.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>6 Oktober 2023, Jakarta</small>
+        <h3>AFS Innovators</h3>
+        <p>Akhirnya yaa percobaan kedua kamu ikut afs innovators berhasil juga, aku inget dulu pas kamu gagal saat percobaan pertama, curhat segala macem, apalagi pas wawancara wifimu lag, tapi ternyata kamu ngga nyerah gitu aja, kamu coba lagi and u did it, congrats broo </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="bim.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>2 Desember 2023, MAN 2 Kota Malang</small>
+        <h3>Keterima BIM</h3>
+        <p>Bener bener berturut turut ya, kamu dapet pengumuman ketrima bim pas program akhir di afs, selamat ya, aku inget dulu kamu cerita lek nangis habis di interview, apalagi dulu pernah salah nilai, tapi akhirnya tanggal 2 kamu ketrima bener bener hadiah terbaik buat ultahmu gk sii </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="chatuda.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>4 Desember 2023 - Chat WA</small>
+        <h3>SS an WA</h3>
+        <p>Aku inget kamu pernah ngirim ini, and thats true, uda cantik, pinter lagi, dapet beasiswa bener bener kek jerome, mimpinya pun sama :) </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="gantungan bim.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>3 Januari 2024 - MAN 2 Kota Malang</small>
+        <h3>Hadiah Gantungan</h3>
+        <p>dan yaa gantungan ini tetep gantung di tasku, bahkan sampek tasku sobek karena kecelakaan dulu, tapi gantungan ini bakal tak jaga terus, if u know, setiap aku sepedaan dan bawa tas, aku selalu meraba ke belakang, mastiin gantungannya gak jatuh :) </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="perbiman.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>28 Februari 2024 - Naik Ojek</small>
+        <h3>Perbiman duniawi</h3>
+        <p>Jadi manusia tersibuk di dunia iki wkwkwk, banyak project bim, belum lagi jadi osima, sampek gini tetep zoom meskipun di jalan wkwkwk, semangat banget, apa yang ngga buat bim </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="flighsumpro.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>21 Juli 2024 - Pesawat</small>
+        <h3>Summer Program</h3>
+        <p>meskipun summer programnya ngga ke aussie tapi ini uda keren si, bener" meskipun ngga dapet sumpro yang ln masih dapet yg didalem negeri, aku inget kata" mu, tidak lolos sumpro, its not end of everything, jadi penyemangatku juga kata kata itu pas aku gk lolos OSN, btw makasi juga ya udah nyemangatin dan ngasi beberapa motivasi ke aku menjelang dan sesudah OSN :)</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="tes ielts lagi karna kurang.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>05 November 2024 - Jakarta</small>
+        <h3>Tes lagi</h3>
+        <p>Bener bener ya semangat mu gk pernah padam, aku lupa ini tes SAT atau IELTS, pokok aku ingete kamu tes lagi karna porinmu kurang, kek e IELTS de, gilak sampek semahal itu yaa, tapi aku salut sama semangatmu sii, iyalah demi Aussie</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="ikut falp.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>20 November 2024 - MAN 2 Kota Malang</small>
+        <h3>Ikut FALP</h3>
+        <p>Tiba tiba banget kamu ngajakin aku ikut FALP, dulu tak iya in lagi, meskipun kita sama sama gk lolos, tapi experience buat cv nya keren si, gini rasanya ternyata ribetnya buat cv, sama ngebut banget ngedit video wkwkwk</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="dikira aoc.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>17 Desember 2024 - Chat WA</small>
+        <h3>Dikira ikut AOC</h3>
+        <p>ini nihh, calon penghuni kursi Aoc, sampek mau di kick dari grup wkwkwk, aku belum dapet ceritanya dari kamu si gimana kronologi bisa sempet mau aoc,kapan kapan ceritain dong hehe</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="mundur eligible.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>17 Januari 2025 - Chat WA</small>
+        <h3>Mundur Eligible</h3>
+        <p>ini foto yang kamu kirim setelah aku ngirim kalau aku eligible, yaa ngga heran si pasti lebih memilih kulliah di luar daripada dalam negeri</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="majulagi.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>21 Januari 2025 - Chat WA</small>
+        <h3>Jadi Eligible</h3>
+        <p>ini nihh, tiba tiba aja, jadi eligible lagi padahal udah isi form pengunduran diri, bener" di all in semua dalam dan luar negeri</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="snbpmey.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>18 Maret 2025 - Chat WA</small>
+        <h3>Ketrima SNBP</h3>
+        <p>sebelumnya selamat ya ketrima di ub ( meskipun gk jadi ambil ) sementara aku ketolak, rasanya kek apalah udah osn gagal snbp gagal juga :( </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="bimtolak.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>24 April 2025 - Chat WA</small>
+        <h3>Ketolak BIM</h3>
+        <p>"cek tau merah" katamu kemaren pas ketolak bim, tapi meskipun merah, tapi merahmu di bim apalahh wkwkwk, beda sama orang orang yg merahnya di snbp, apalagi warna merah di snbp besar banget lagi, rasanya jlepp</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-image">
+        <img src="beagaruda.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-content">
+        <small>28 April 2025 - Chat WA</small>
+        <h3>Keterima Beasiswa Garuda</h3>
+        <p>and finally kamu ketrima di beasiswa garuda, 4 tahun beda negara ni bakalan wkwk, gapapa apapun demi masa depan yang cerahkan, selamat yaa sekali lagi, dan selamat menimba ilmu di Aussie, negara yg kamu pengen, jangan lupa ntar foto" yang banyak yaa, enjoy your study bro :) </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>Nah itu dia sedikit kilas balik dari aku, sekali lagi selamat ya udah ketrima di Monash University, selamat cari ilmu di Aussie, jangan lupain orang orang yang masih di Indo ( termasuk aku wkwk) yaudah Happy Graduation ya bro, makasih udah jadi orang yg buat aku pernah ngambis banget kejar sesuatu, oo yaa di bawah ini ada sedikit video dari aku (niru kamu dulu hehe) dilihat ya, yaudah gitu aja sukses terus ya Mey, see yaa🥹🤗</p>
+    </div>
+    <a href="https://drive.google.com/drive/folders/1_H2-BNNpcegh5bEn05kUnMT_nu_B8-PW?usp=sharing" class="btn">Lanjut Video</a>
+  </footer>
+
+  <script>
+    // Efek muncul saat di-scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {threshold: 0.1});
+
+    document.querySelectorAll('.photo').forEach(photo => {
+      observer.observe(photo);
+    });
+  </script>
+</body>
+
+</html>
